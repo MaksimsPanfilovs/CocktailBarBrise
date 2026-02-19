@@ -110,6 +110,7 @@ a {
   .cont_container {
     margin: var(--space_7) auto;
     display: flex;
+    flex-direction: row;
     gap: var(--space_5);
     max-width: var(--container);
   }

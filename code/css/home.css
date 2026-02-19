@@ -1,6 +1,6 @@
 /* HERO */
 .hero {
-  background: url("/code/img/main.webp") center/cover no-repeat;
+  background: url("../img/main.webp") center/cover no-repeat;
   height: 260px;
   width: 100%;
   border-radius: 0 0 var(--radius_sm) var(--radius_sm);
