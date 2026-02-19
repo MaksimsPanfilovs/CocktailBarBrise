@@ -1,0 +1,238 @@
+/* TITLE */
+#gallery_title {
+  margin: var(--space_5) auto;
+}
+
+/* MENU TITLE */
+.menu_select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: var(--space_5) auto;
+
+  gap: var(--space_4);
+  width: 250px;
+  height: var(--space_5);
+
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius_sm);
+  box-shadow: var(--shadow_soft);
+}
+
+#menu_title,
+#menu_btn {
+  font-size: var(--space_3);
+  font-family: var(--font_main);
+  color: #145da0;
+  text-shadow: 0 0 8px rgba(0, 179, 255, 0.7);
+}
+
+#menu_title {
+  margin: 0;
+  text-transform: none;
+  text-align: center;
+}
+
+#menu_btn {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #menu_btn:hover {
+    color: var(--accent);
+    text-shadow: var(--shadow_soft);
+  }
+}
+
+/* MENU SLIDER */
+
+.cocktail_slider,
+.image_slider {
+  position: relative;
+  width: min(680px, 95%);
+  margin: var(--space_5) auto;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius_sm);
+  padding: var(--space_4) var(--space_2);
+  background-color: var(--bg_main);
+  box-shadow: var(--shadow_soft);
+  margin-top: 0;
+}
+
+.menu_container,
+.gallery_container {
+  border-radius: var(--radius_sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 320px;
+
+  overflow: hidden;
+}
+
+.menu_container .menu_seite,
+.gallery_container .menu_seite {
+  display: none;
+  width: min(600px, 100%);
+  height: auto;
+  border-radius: var(--radius_sm);
+}
+
+.menu_container .menu_seite.active {
+  display: block;
+}
+
+/* GALLERY SLIDER */
+.gallery_container {
+  height: 550px;
+  width: auto;
+}
+
+
+.gallery_container .menu_seite.aktive {
+  display: block;
+}
+
+/* BTNs */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: var(--space_5);
+  height: var(--space_5);
+  border-radius: 50%;
+
+  background: var(--bg_main);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.prev {
+  left: 4px;
+}
+
+.next {
+  right: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .prev:hover,
+  .next:hover {
+    background: var(--accent);
+    color: var(--bg_main);
+    box-shadow: var(--shadow_strong);
+  }
+}
+
+/* MENU FULLSCREEN */
+.hide_layout header,
+.hide_layout footer {
+  display: none;
+}
+
+.hide_layout .menu_seite {
+  height: 600px;
+}
+
+.hide_layout .menu_select {
+  margin-top: var(--space_6);
+}
+
+
+/* ============ BREAKPOINTS (mobile-first) ============= */
+
+@media (min-width: 769px) {
+  
+  .menu_select {
+    width: 370px;
+    height: 40px;
+    gap: var(--space_5);
+    margin: var(--space_4) auto;
+    border-radius: var(--radius_md);
+  }
+  #menu_title,
+  #menu_btn {
+    font-size: var(--space_4);
+  }
+  .cocktail_slider,
+  .image_slider {
+    border-radius: var(--radius_md);
+  }
+  .menu_container,
+  .gallery_container {
+    border-radius: var(--radius_md);
+  }
+
+  .hide_layout .menu_seite {
+    height: auto;
+  }
+
+  .hide_layout .menu_select {
+    margin-top: var(--space_5);
+  }
+
+  .gallery_container {
+    height: 580px;
+  }
+}
+
+@media (min-width: 901px) {
+  
+  #gallery_title {
+    margin: var(--space_4) auto;
+  }
+
+  .menu_select {
+    gap: var(--space_5);
+    width: 400px;
+    height: var(--space_6);
+    padding: var(--space_1) var(--space_4);
+
+    margin: var(--space_4) auto;
+    border-radius: var(--radius_lg);
+  }
+  #menu_title,
+  #menu_btn {
+    font-size: var(--space_5);
+  }
+  .cocktail_slider,
+  .image_slider {
+    border-radius: var(--radius_lg);
+  }
+  .menu_container,
+  .gallery_container {
+    border-radius: var(--radius_lg);
+  }
+
+  .hide_layout .cocktail_slider {
+    padding: var(--space_1);
+  }
+
+  .hide_layout .menu_seite {
+    width: 650px;
+    height: 820px;
+  }
+
+  .hide_layout .menu_select {
+    margin: var(--space_3) auto
+    
+  }
+
+  .gallery_container {
+    height: 650px;
+  }
+}

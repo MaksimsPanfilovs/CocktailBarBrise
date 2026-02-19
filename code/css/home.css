@@ -1,0 +1,128 @@
+/* HERO */
+.hero {
+  background: url("/code/img/main.webp") center/cover no-repeat;
+  height: 260px;
+  width: 100%;
+  border-radius: 0 0 var(--radius_sm) var(--radius_sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  box-shadow: var(--shadow_soft);
+}
+
+/* ABOUT / RESERVATION */
+
+.about {
+  border: 2px solid var(--accent);
+  border-radius: var(--radius_sm);
+  padding: var(--space_4);
+  box-shadow: var(--shadow_soft);
+  margin: var(--space_4) auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .about:hover {
+    background-color: var(--table_hover);
+    box-shadow: var(--shadow_strong);
+  }
+}
+
+#reservation_phone {
+  font-size: var(--space_font_p_pc);
+  font-weight: bold;
+  color: var(--accent_blue);
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #reservation_phone:hover {
+    text-decoration: underline;
+  }
+}
+
+/* TABLES */
+#hours {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hours_table {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: var(--space_4) auto;
+}
+
+td {
+  border: 1px solid var(--border_dark);
+  padding: var(--space_2);
+  font-size: var(--space_3);
+}
+
+tr:nth-child(even) {
+  background: #1c1c1c;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  tr:hover {
+    background-color: var(--table_hover);
+    transform: none;
+  }
+}
+
+/* ============ BREAKPOINTS (mobile-first) ============= */
+
+/* TABLET */
+@media (min-width: 769px) {
+  .hero {
+    height: 380px;
+    border-radius: 0 0 var(--radius_md) var(--radius-md);
+    margin: 0 auto;
+  }
+
+  .about {
+    border-radius: var(--radius_md);
+    margin: var(--space_5) auto;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 901px) {
+  
+  .hero h1 {
+    font-size: var(--space_7);
+  }
+  .hero {
+    max-width: var(--container);
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 0 0 var(--radius_lg) var(--radius_lg);
+  }
+
+  .about {
+    max-width: 900px;
+    padding: var(--space_5);
+    border-radius: var(--radius_lg);
+    margin: var(--space_7) auto;
+  }
+
+  #reservation_phone {
+    font-size: var(--space_4);
+  }
+
+  #hours {
+    padding: var(--space_6) 0;
+  }
+
+  #hours_table {
+    width: min(var(--container), 95%);
+    max-width: var(--container);
+  }
+}
