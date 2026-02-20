@@ -34,7 +34,8 @@ h3 {
 .row_box {
   margin: var(--space_4) auto;
   padding: 0 auto;
-  /* flex-direction: column; */
+  gap: var(--space_4);
+  flex-direction: column;
 }
 
 /* ============ BREAKPOINTS (mobile-first) ============= */
