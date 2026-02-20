@@ -33,7 +33,7 @@ h3 {
 
 .row_box {
   margin: var(--space_4) auto;
-  padding: 0 auto;
+  display: flex;
   gap: var(--space_4);
   flex-direction: column;
 }
